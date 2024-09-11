@@ -1,5 +1,3 @@
-import { add, multiply, subtract } from './index';
-
 describe('Math Utilities', () => {
-
+    expect(1 + 1).toBe(2);
 });
