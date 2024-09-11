@@ -27,7 +27,7 @@ jobs:
 
       # Install dependencies using pnpm
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       # Run Jest tests with coverage
       - name: Run Jest Tests with Coverage
