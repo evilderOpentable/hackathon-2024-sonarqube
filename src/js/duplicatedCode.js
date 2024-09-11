@@ -1,18 +1,41 @@
-// duplicatedCode.js
+// auth.js
 
-function calculateDiscount(price, discountPercentage) {
-    if (discountPercentage > 100 || discountPercentage < 0) {
-        throw new Error('Invalid discount percentage');
+function authenticateUser(username, password) {
+    // Check if username exists
+    if (username === "") {
+        return "Username is required";
     }
-    return price - (price * (discountPercentage / 100));
+
+    // Check if password exists
+    if (password === "") {
+        return "Password is required";
+    }
+
+    // Simulate checking user credentials
+    if (username === "admin" && password === "password123") {
+        return "Login successful";
+    } else {
+        return "Invalid username or password";
+    }
 }
 
-// This function has almost the same logic as calculateDiscount()
-function calculateTax(price, taxPercentage) {
-    if (taxPercentage > 100 || taxPercentage < 0) {
-        throw new Error('Invalid tax percentage');
+function validatePassword(password) {
+    // Check if password exists
+    if (password === "") {
+        return "Password is required";
     }
-    return price + (price * (taxPercentage / 100)); // Duplicated logic here
+
+    // Check if password length is sufficient
+    if (password.length < 8) {
+        return "Password must be at least 8 characters long";
+    }
+
+    // Simulate password validation
+    if (password === "password123") {
+        return "Valid password";
+    } else {
+        return "Invalid password";
+    }
 }
 
-module.exports = { calculateDiscount, calculateTax };
+module.exports = { authenticateUser, validatePassword };
