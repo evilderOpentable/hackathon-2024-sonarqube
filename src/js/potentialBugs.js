@@ -1,4 +1,15 @@
-// potentialBugs.js
+let x = 'a';
+
+let foo = {
+  y: 1
+};
+
+with (foo) { // Noncompliant
+  y = 4;     // Updates 'foo.y'
+  x = 3;     // Does not add a 'foo.x' property; updates the variable 'x' in the outer scope instead
+}
+
+console.log(foo.x + " " + x); // Prints: undefined 3
 
 // Example 1: Null or Undefined Check
 function nullUndefinedCheck(value) {
