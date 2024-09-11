@@ -1,41 +1,35 @@
+// auth.js
+
 // Function 1: authenticateUser
 function authenticateUser(username, password) {
-    // Check if username exists
-    if (username === "") {
-        return "Username is required";
-    }
-
-    // Check if password exists
-    if (password === "") {
-        return "Password is required";
-    }
-
-    // Simulate checking user credentials
-    if (username === "admin" && password === "password123") {
-        return "Login successful";
-    } else {
-        return "Invalid username or password";
-    }
+    if (username === "") return "Username is required";
+    if (password === "") return "Password is required";
+    if (username === "admin" && password === "password123") return "Login successful";
+    return "Invalid username or password";
 }
 
-// Function 2: validatePassword
-function validatePassword(password) {
-    // Check if password exists
-    if (password === "") {
-        return "Password is required";
-    }
-
-    // Check if password length is sufficient
-    if (password.length < 8) {
-        return "Password must be at least 8 characters long";
-    }
-
-    // Simulate password validation
-    if (password === "password123") {
-        return "Valid password";
-    } else {
-        return "Invalid password";
-    }
+// Function 2: checkCredentials (Exact Duplicate)
+function checkCredentials(username, password) {
+    if (username === "") return "Username is required";
+    if (password === "") return "Password is required";
+    if (username === "admin" && password === "password123") return "Login successful";
+    return "Invalid username or password";
 }
 
-module.exports = { authenticateUser, validatePassword };
+// Function 3: verifyPassword (Exact Duplicate)
+function verifyPassword(password) {
+    if (password === "") return "Password is required";
+    if (password.length < 8) return "Password must be at least 8 characters long";
+    if (password === "password123") return "Valid password";
+    return "Invalid password";
+}
+
+// Function 4: checkPassword (Exact Duplicate)
+function checkPassword(password) {
+    if (password === "") return "Password is required";
+    if (password.length < 8) return "Password must be at least 8 characters long";
+    if (password === "password123") return "Valid password";
+    return "Invalid password";
+}
+
+module.exports = { authenticateUser, checkCredentials, verifyPassword, checkPassword };
