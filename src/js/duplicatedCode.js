@@ -1,10 +1,22 @@
-// duplicatedCode.js
+// auth.js
 
-function calculateDiscount(price, discountPercentage) {
-    if (discountPercentage > 100 || discountPercentage < 0) {
-        throw new Error('Invalid discount percentage');
+function authenticateUser(username, password) {
+    // Check if username exists
+    if (username === "") {
+        return "Username is required";
     }
-    return price - (price * (discountPercentage / 100));
+
+    // Check if password exists
+    if (password === "") {
+        return "Password is required";
+    }
+
+    // Simulate checking user credentials
+    if (username === "admin" && password === "password123") {
+        return "Login successful";
+    } else {
+        return "Invalid username or password";
+    }
 }
 
-module.exports = { calculateDiscount };
+module.exports = { authenticateUser };
