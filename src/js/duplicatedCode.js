@@ -7,20 +7,4 @@ function calculateDiscount(price, discountPercentage) {
     return price - (price * (discountPercentage / 100));
 }
 
-// This function has almost the same logic as calculateDiscount()
-function calculateTax(price, taxPercentage) {
-    if (taxPercentage > 100 || taxPercentage < 0) {
-        throw new Error('Invalid tax percentage');
-    }
-    return price + (price * (taxPercentage / 100)); // Duplicated logic here
-}
-
-// This function has almost the same logic as calculateDiscount()
-function calculatePrice(price, taxPercentage) {
-    if (price > 100 || price < 0) {
-        throw new Error('Invalid price range');
-    }
-    return price + (price * (taxPercentage / 100)); // Duplicated logic here
-}
-
-module.exports = { calculateDiscount, calculateTax, calculatePrice };
+module.exports = { calculateDiscount };
