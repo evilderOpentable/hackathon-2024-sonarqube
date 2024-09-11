@@ -1,5 +1,4 @@
-// auth.js
-
+// Function 1: authenticateUser
 function authenticateUser(username, password) {
     // Check if username exists
     if (username === "") {
@@ -19,4 +18,24 @@ function authenticateUser(username, password) {
     }
 }
 
-module.exports = { authenticateUser };
+// Function 2: validatePassword
+function validatePassword(password) {
+    // Check if password exists
+    if (password === "") {
+        return "Password is required";
+    }
+
+    // Check if password length is sufficient
+    if (password.length < 8) {
+        return "Password must be at least 8 characters long";
+    }
+
+    // Simulate password validation
+    if (password === "password123") {
+        return "Valid password";
+    } else {
+        return "Invalid password";
+    }
+}
+
+module.exports = { authenticateUser, validatePassword };
