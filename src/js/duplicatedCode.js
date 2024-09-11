@@ -29,5 +29,87 @@ function checkPassword(password) {
     if (password === "password123") return "Valid password";
     return "Invalid password";
 }
+// demo.js
 
-module.exports = { authenticateUser, checkCredentials, verifyPassword, checkPassword };
+// Function 1: Display duplicated lines
+function duplicatedLinesExample1(value) {
+    // Check if the value is empty
+    if (value === "") {
+        return "Value is required";
+    }
+    // Check if the value length is valid
+    if (value.length < 5) {
+        return "Value must be at least 5 characters long";
+    }
+    // Return success message
+    return "Value is valid";
+}
+
+// Function 2: Display duplicated lines
+function duplicatedLinesExample2(value) {
+    // Check if the value is empty
+    if (value === "") {
+        return "Value is required";
+    }
+    // Check if the value length is valid
+    if (value.length < 5) {
+        return "Value must be at least 5 characters long";
+    }
+    // Return success message
+    return "Value is valid";
+}
+
+// Function 3: Display duplicated blocks
+function duplicatedBlocksExample1(value) {
+    // Check if the value is empty
+    if (value === "") {
+        return "Value is required";
+    }
+    // Check if the value length is valid
+    if (value.length < 5) {
+        return "Value must be at least 5 characters long";
+    }
+    // Return success message
+    return "Value is valid";
+}
+
+// Function 4: Display duplicated blocks
+function duplicatedBlocksExample2(value) {
+    // Check if the value is empty
+    if (value === "") {
+        return "Value is required";
+    }
+    // Check if the value length is valid
+    if (value.length < 5) {
+        return "Value must be at least 5 characters long";
+    }
+    // Return success message
+    return "Value is valid";
+}
+
+// Function 5: Display additional duplicated block (with slight variation)
+function duplicatedBlocksExample3(value) {
+    // Check if the value is empty
+    if (value === "") {
+        return "Value is required";
+    }
+    // Check if the value length is valid
+    if (value.length < 5) {
+        return "Value must be at least 5 characters long";
+    }
+    // Return success message
+    return "Value is good"; // Slightly different message
+}
+
+module.exports = {
+    duplicatedLinesExample1, 
+    duplicatedLinesExample2, 
+    duplicatedBlocksExample1, 
+    duplicatedBlocksExample2, 
+    duplicatedBlocksExample3,
+    authenticateUser,
+    checkCredentials,
+    verifyPassword,
+    checkPassword,
+};
+// Function 6: Display additional duplicated block (with slight variation)
