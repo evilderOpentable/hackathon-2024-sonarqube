@@ -1,6 +1,4 @@
-// mathUtils.test.js
-
-const { add, subtract } = require('./mathUtils');
+import { add, subtract } from './index';
 
 describe('Math Utilities', () => {
     test('adds 1 + 2 to equal 3', () => {
