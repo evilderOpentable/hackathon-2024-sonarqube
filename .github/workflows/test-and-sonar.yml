@@ -31,7 +31,7 @@ jobs:
 
       # Run Jest tests with coverage
       - name: Run Jest Tests with Coverage
-        run: pnpm jest --coverage
+        run: npm jest --coverage
 
       # Upload test coverage report (if needed)
       - name: Upload Coverage Report
@@ -45,7 +45,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
-          pnpm install sonar-scanner --global
+          npm install sonar-scanner --global
           sonar-scanner \
             -Dsonar.projectKey=my-project-key \
             -Dsonar.organization=my-organization \
