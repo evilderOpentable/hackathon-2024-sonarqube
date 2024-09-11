@@ -31,7 +31,7 @@ jobs:
 
       # Run Jest tests with coverage
       - name: Run Jest Tests with Coverage
-        run: npm jest --coverage
+        run: npm test --coverage
 
       # Upload test coverage report (if needed)
       - name: Upload Coverage Report
